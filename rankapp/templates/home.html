@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+<div class="container" style="text-align:center;">
+<br>
+	<form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+		<div class="card">
+			<div class="card-body">
+			<h6 class="card-subtitle mb-2 text-muted">csvファイルをアップロード</h6>
+			<br>
+			<p><input name="file0" type="file"/></p>
+			<br>
+			<p><button type="submit" class="btn btn-outline-success">検索順位の取得を実行する</button></p>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% if message %}
+	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+{% endif %}
+{% endblock %}
