@@ -130,3 +130,6 @@ dmypy.json
 
 # app output
 files/
+
+# for mac
+.DS_Store
